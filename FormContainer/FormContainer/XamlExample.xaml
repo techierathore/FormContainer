@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrl="clr-namespace:FormContainer;assembly=FormContainer"
+             x:Class="FormContainer.XamlExample" Title="XAML Example" Padding="0,10,0,0">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Button">
+        <Setter Property="BorderRadius" Value="10" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="WidthRequest" Value="100" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="HorizontalOptions"  Value="Center" />
+        <Setter Property="VerticalOptions"    Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="Red" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Content>
+    <StackLayout Spacing="0" >
+      <ctrl:MyContainer HeaderText="Login (XAML)" HeaderTextColor="White" HeaderBackGroundColor="Black" ContentBackgroundColor="#F0F0F0">
+        <ctrl:MyContainer.ContainerContent>
+          <StackLayout>
+            <Entry Placeholder="User Name" />
+            <Entry Placeholder="Password" />
+            <Button Text="Login" />
+          </StackLayout>
+        </ctrl:MyContainer.ContainerContent>
+      </ctrl:MyContainer>
+      <BoxView  HeightRequest = "10"  />
+      <ctrl:MyContainer HeaderText="Sign Up (XAML)" HeaderTextColor="White" HeaderBackGroundColor="Black" ContentBackgroundColor="#F0F0F0">
+        <ctrl:MyContainer.ContainerContent>
+          <StackLayout>
+            <Entry Placeholder="First Name" />
+            <Entry Placeholder="Last Name" />
+            <Entry Placeholder="User Name" />
+            <Entry Placeholder="Email" />
+            <Entry Placeholder="Password" />
+            <Entry Placeholder="Confirm Password" />
+            <Button Text="Sign Up" />
+          </StackLayout>
+        </ctrl:MyContainer.ContainerContent>
+      </ctrl:MyContainer>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

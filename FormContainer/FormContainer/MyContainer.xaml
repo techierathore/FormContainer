@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormContainer.MyContainer">
+  <ContentView.Content>
+    <Grid RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="60" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="5" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="5" />
+      </Grid.ColumnDefinitions>
+      <Frame Grid.Row="0" Grid.Column="1" x:Name="HeaderFrame" OutlineColor="Black" HasShadow="False">
+        <Label x:Name="HeaderLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+      </Frame>
+      <Frame Grid.Row="1" Grid.Column="1" x:Name="ContentFrame" OutlineColor="Black" HasShadow="False">
+      </Frame>
+    </Grid>
+  </ContentView.Content>
+</ContentView>
